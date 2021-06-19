@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thong ke san pham</h1>
+<input type="text" id="new">
+<button onclick="themsp()"> AddSp </button>
+<br><br>
+<button onclick="demo()">Hien thi menu</button>
+<table border="4">
+    <tr>
+        <td>Ten san pham</td>
+    </tr>
+    <tbody id="sp">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+    <script>
+        let tensp = ['nuoc dua','nuoc tranh', 'nuoc me', 'nuoc sau'];
+
+        function demo() {
+            let ten = '';
+            for (let i = 0; i < tensp.length; i++) {
+             ten+=" <tr>" +
+                 "        <td>"+ tensp[i]+"</td>" +
+                 "        <td> <button onclick='xoa("+i+")'>Delete</button> </td>" +
+                 "        <td> <button onclick='sua("+i+")'>Edit</button> </td>" +
+                 "    </tr>"
+            }
+            document.getElementById('sp').innerHTML= ten;
+        }
+        function themsp(){
+            let spmoi = document.getElementById('new').value;
+            tensp.push(spmoi);
+            demo();
+            document.getElementById('new').value='';
+        }
+        function xoa(index){
+            tensp.splice(index,1);
+            demo();
+        }
+        function sua(index){
+            let newsua = prompt("Nhap thong tin moi" ,tensp[index] );
+            tensp[index]= newsua;
+            demo();
+
+        }
+    </script>
+
+
+</table>
+</body>
+</html>

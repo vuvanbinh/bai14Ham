@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do.</title>
+</head>
+<body>
+<h2>Chuyen doi nhiet do.</h2>
+<label> Nhap F : </label>
+<input type="number" placeholder="Nhap do F" id="nhap" oninput="daura()"><br><br>
+<p> Doi sang do C : <span id="ra"></span> </p>
+<script>
+    function daura(c){
+        f=document.getElementById("nhap").value;
+        c=(f-32)/1.8;
+        document.getElementById("ra").innerHTML= c;
+    }
+
+</script>
+
+</body>
+</html>

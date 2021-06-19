@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhấn vào Click để kiểm tra thông tin:</h3>
+<button onclick="xacnhan()">Click</button>
+<p id="display"></p>
+<script>
+// function xacnhan(){
+//     let m = confirm('Giới tính của bạn là nữ ');
+//     if(m==true){
+//         txt=' Bạn đang nói dối chúng tôi,hãy thành thật xác nhận lại :))';
+//     }else {
+//         txt = 'Tốt lắm!! bạn đã thành thật trong cuộc chơi :v';
+//     }
+//     document.getElementById('display').innerHTML= txt;
+//
+// //
+
+function xntt(i){
+    let kq ='';
+    if(i){
+        kq = 'Ban khong phai nguoi nhu vay';
+    }else {
+        kq = 'Tim duoc ban roi';
+    }
+    return kq;
+}
+
+let hoi=confirm('Ban la nguoi thich an mam tom ak ')
+let  m=xntt(hoi);
+alert(m);
+
+// function processConfirm(answer) {
+//     let result = "";
+//     if (answer) {
+//         result = "Excellent. We'll play a nice game of chess.";
+//     } else {
+//         result = "Maybe later then.";
+//     }
+//     return result;
+// }
+//
+// let confirmAnswer = confirm("Shall we play a game?");
+// let theAnswer = processConfirm(confirmAnswer);
+// alert(theAnswer);
+</script>
+</body>
+</html>
